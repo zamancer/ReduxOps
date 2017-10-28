@@ -1,0 +1,80 @@
+{
+    // ACTION - UPDATE_CURRENT_TEMPLATE
+    // ACTION - SAVE_EXPORT_TEMPLATE
+    "currentTemplate": {
+        "id": "",
+        "name": "",
+        "logo": "",
+        "logoPosition": "",
+        "background": "",
+        "backgroundPosition": "",
+        "lineColor": ""
+    },
+    // ACTION - SAVE_EXPORT_TEMPLATE
+    "exportTemplates": {
+        "1000": {
+            "id": "1000",
+            "name": "Plantilla1",
+            "logo": "image1.png",
+            "logoPosition": "logo-top-left",
+            "background": "image2.png",
+            "backgroundPosition": "back-center",
+            "lineColor": "#FFFFFF"
+        },
+        "1001": {
+            "id": "1001",
+            "name": "Plantilla2",
+            "logo": "image2.png",
+            "logoPosition": "logo-top-right",
+            "background": "image3.png",
+            "backgroundPosition": "back-full",
+            "lineColor": "#F0F0F0"
+        }
+    },
+    // ACTION - UPDATE THE EXPORT FILE
+    "exportFiles": {
+        "2000": {
+            "id": "2000",
+            "template": "1000",
+            "pages": ["3001", "3002"]
+        }
+    },
+    // ACTION - ADD_EXPORT_PAGE / LOAD_EXPORT_PAGES
+    // ACTION - UPDATE_EXPORT_PAGE (One)
+    "exportPages": {
+        "3001": {
+            "id": "3001",
+            "type": "Artist", // "Artist" or "ArtPiece"
+            "title": "",
+            "image": "image_in_page.png",
+            "withImage": true,
+            "categories": ["4000"] // values only? "categories": "Lisa, Jisoo, Jenny, Rosé",
+        }
+    },
+    // ACTION - LOAD_EXPORT_CATEGORIES
+    "exportCategories": {
+        "4000   ": {
+            "id": "4000",
+            "label": "Integrantes",
+            "value": "Lisa, Jisoo, Jenny, Rosé"
+        }
+    },
+    // ACTION - LOAD_EXPORT_ARTISTS
+    "exportArtists": {
+        "5000": {
+            "id": "5000",
+            "profilesImages": ["1.jpg", "2.jpg"],
+            "name": "LISA",
+            "categories": ["4000"]
+        }
+    },
+    // ACTION - LOAD_EXPORT_ARTPIECES
+    "exportArtPieces": {
+        "6000": {
+            "id": "6000",
+            "image": "1.jpg",
+            "title": "LISA",
+            "categories": ["4000"]
+        }
+    }
+}
