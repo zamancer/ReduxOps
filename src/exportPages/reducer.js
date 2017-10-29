@@ -34,3 +34,13 @@ export default function reduce(state = initialState, action = {}) {
             return state
     }
 }
+
+// SELECTORS
+
+export function getExportPages(state) {
+    return Object.keys(state.exportPages).map(p => state.exportPages[p])
+}
+
+export function getExportPageById(state, id) {
+    return state.exportPages[id]
+}
