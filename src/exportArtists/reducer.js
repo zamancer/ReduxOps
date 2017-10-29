@@ -12,3 +12,12 @@ export default function reduce(state = initialState, action = {}) {
             return state
     }
 }
+
+// SELECTORS
+export function getExportArtists(state) {
+    return Object.keys(state.exportArtists).map(p => state.exportArtists[p])
+}
+
+export function getExportArtistById(state, id) {
+    return state.exportArtists[id]
+}
