@@ -12,3 +12,12 @@ export default function reduce(state = initialState, action = {}) {
             return state
     }
 }
+
+// SELECTORS 
+export function getExportCategories(state) {
+    return Object.keys(state.exportCategories).map(p => state.exportCategories[p])
+}
+
+export function getExportCategoryById(state, id) {
+    return state.exportCategories[id];
+}
