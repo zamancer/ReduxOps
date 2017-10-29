@@ -93,4 +93,62 @@ describe('Topic Reducer', () => {
             }
         }).toReturnState(resultState)
     })
+
+    it('should load all templates', () => {
+        const resultState = {
+            currentTemplate: {
+                id: "",
+                name: "",
+                logo: "",
+                logoPosition: "",
+                background: "",
+                backgroundPosition: "",
+                lineColor: ""
+            },
+            allTemplates: {
+                "1000": {
+                    "id": "1000",
+                    "name": "Plantilla1",
+                    "logo": "image1.png",
+                    "logoPosition": "logo-top-left",
+                    "background": "image2.png",
+                    "backgroundPosition": "back-center",
+                    "lineColor": "#FFFFFF"
+                },
+                "1001": {
+                    "id": "1001",
+                    "name": "Plantilla2",
+                    "logo": "image2.png",
+                    "logoPosition": "logo-top-right",
+                    "background": "image3.png",
+                    "backgroundPosition": "back-full",
+                    "lineColor": "#F0F0F0"
+                }
+            }
+        }
+
+        Reducer(theReducer).expect({
+            type: actionTypes.TEMPLATES_LOAD_TEMPLATES,
+            payload: {
+                "1000": {
+                    "id": "1000",
+                    "name": "Plantilla1",
+                    "logo": "image1.png",
+                    "logoPosition": "logo-top-left",
+                    "background": "image2.png",
+                    "backgroundPosition": "back-center",
+                    "lineColor": "#FFFFFF"
+                },
+                "1001": {
+                    "id": "1001",
+                    "name": "Plantilla2",
+                    "logo": "image2.png",
+                    "logoPosition": "logo-top-right",
+                    "background": "image3.png",
+                    "backgroundPosition": "back-full",
+                    "lineColor": "#F0F0F0"
+                }
+            }
+        }).toReturnState(resultState)
+    })
 })

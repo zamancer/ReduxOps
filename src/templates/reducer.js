@@ -40,6 +40,8 @@ const allTemplates = (state = initialState.allTemplates, action = {}) => {
                 ...state,
                 [action.payload.id]: currentTemplate(state[action.payload.id], action)
             }
+        case actionTypes.TEMPLATES_LOAD_TEMPLATES:
+            return Object.assign({}, state, action.payload)
         default:
             return state
     }
