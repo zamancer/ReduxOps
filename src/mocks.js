@@ -28,12 +28,10 @@ export const mockedExportState = {
             lineColor: "#F0F0F0"
         }
     },
-    exportFiles: {
-        ID2000: {
-            id: "ID2000",
-            template: "1000",
-            pages: ["3001", "3002"]
-        }
+    exportFile: {
+        id: "ID2000",
+        template: "1000",
+        pages: ["3001", "3002"]
     },
     exportPages: {
         ID3001: {

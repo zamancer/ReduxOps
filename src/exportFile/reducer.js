@@ -14,3 +14,8 @@ export default function reduce(state = initialState, action = {}) {
             return state;
     }
 }
+
+// SELECTORS
+export function getExportFile(state) {
+    return state.exportFile
+}
