@@ -9,10 +9,10 @@ describe('Topic Actions', () => {
         // TODO:
     })
 
-    it('should handle Thunk actions dispatching', () => {
-        const dispacthes = Thunk(actions.anAction).execute(actionArg)
+    // it('should handle Thunk actions dispatching', () => {
+    //     const dispacthes = Thunk(actions.anAction).execute(actionArg)
 
-        expect(dispacthes.length).toBe(1)
-        expect(dispacthes[0].getAction()).toEqual(expectDispatch)
-    })
+    //     expect(dispacthes.length).toBe(1)
+    //     expect(dispacthes[0].getAction()).toEqual(expectDispatch)
+    // })
 })

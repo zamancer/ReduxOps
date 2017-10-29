@@ -9,4 +9,7 @@ describe('Topic Selectors', () => {
     //     const currentState = {};
     //     Selector(uut.someSelector).expect(currentState).toReturn(expectedData)
     // })
+    it('should do fine', () => {
+        
+    })
 })
