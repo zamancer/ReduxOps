@@ -56,8 +56,14 @@ export default reducer;
 
 // SELECTORS
 
-// HERE YOU INCLUDE YOU SELECTOR FUNCTION.
-// E.g.
-// export function getSpecificDataFromState() {
-//     return state.specific;
-// }
+export function getCurrentTemplate(state) {
+    return state.currentTemplate
+}
+
+export function getAllTemplates(state) {
+    return state.exportTemplates
+}
+
+export function getTemplateById(state, id) {
+    return state.exportTemplates[id]
+}
